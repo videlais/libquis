@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>LibQuis</PackageId>
+    <PackageVersion>1.1.0</PackageVersion>
+    <Authors>Dan Cox</Authors>
+    <Description>A lightweight .NET library for parsing and evaluating domain-specific language expressions used in story filtering and data querying. Features AST-based parsing with support for arithmetic, comparison, logical operations, property access, and custom conditions. Optimized for performance with Span&lt;char&gt;, ArrayPool, and reflection caching.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/videlais/libquis</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dsl;parser;ast;expression;filtering;query;story;performance;span;arraypool</PackageTags>
+    <PackageProjectUrl>https://github.com/videlais/libquis</PackageProjectUrl>
+    <PackageReleaseNotes>
+Version 1.1.0:
+- Performance optimizations: Span&lt;char&gt; for zero-allocation parsing, ArrayPool for string buffers, reflection caching
+- Input validation with ArgumentNullException for better error messages
+- Enhanced XML documentation for all public APIs
+- Comprehensive benchmark suite included
+- Code quality improvements with pragma suppressions for intentional performance patterns
+    </PackageReleaseNotes>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Copyright>Copyright © 2025 Dan Cox</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
