@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>LibQuis</PackageId>
-    <PackageVersion>1.1.0</PackageVersion>
+    <PackageVersion>1.1.1</PackageVersion>
     <Authors>Dan Cox</Authors>
     <Description>A lightweight .NET library for parsing and evaluating domain-specific language expressions used in story filtering and data querying. Features AST-based parsing with support for arithmetic, comparison, logical operations, property access, and custom conditions. Optimized for performance with Span&lt;char&gt;, ArrayPool, and reflection caching.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
