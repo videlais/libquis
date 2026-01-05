@@ -40,7 +40,7 @@ jobs:
       run: dotnet test --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory ./TestResults
       
     - name: Upload test results
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       if: always()
       with:
         name: test-results-${{ matrix.os }}
@@ -68,7 +68,7 @@ jobs:
       run: dotnet pack LibQuis/LibQuis.csproj --configuration Release --no-restore --output ./artifacts /p:GeneratePackageOnBuild=false
       
     - name: Upload NuGet artifact
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: nuget-package
         path: ./artifacts/*.nupkg
@@ -96,7 +96,7 @@ jobs:
         dotnet run -c Release --no-restore -- --filter "*" --exporters json
         
     - name: Upload benchmark results
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: benchmark-results
         path: LibQuis.Benchmarks/BenchmarkDotNet.Artifacts/results/*.json
